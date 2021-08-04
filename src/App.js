@@ -10,15 +10,19 @@ function App() {
 
   return (
     <div className="App">
-      <Editor
-        text={text}
-        setText={setText}
-        editorMaximized={editorMaximized}
-        setEditorMaximized={() => setEditorMaximized(!editorMaximized)}/>
-      <Previewer
-        text={text}
-        previewerMaximized={previewerMaximized}
-        setPreviewerMaximized={() => setPreviewerMaximized(!previewerMaximized)}/>
+      { previewerMaximized ? '' :
+        <Editor
+          text={text}
+          setText={setText}
+          editorMaximized={editorMaximized}
+          setEditorMaximized={() => setEditorMaximized(!editorMaximized)}/>
+      }
+      { editorMaximized ? '' :
+        <Previewer
+          text={text}
+          previewerMaximized={previewerMaximized}
+          setPreviewerMaximized={() => setPreviewerMaximized(!previewerMaximized)}/>
+      }
     </div>
   );
 }

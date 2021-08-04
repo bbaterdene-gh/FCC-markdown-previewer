@@ -4,7 +4,7 @@ import marked from 'marked';
 
 export const Previewer = (props) => {
   return (
-    <div className="mx-auto w-6/12 h-full mb-10">
+    <div className="mx-auto w-6/12 h-full mb-10 mt-5">
     <Toolbar
       isMaximized={props.previewerMaximized}
       setMaximized={props.setPreviewerMaximized}>Previewer</Toolbar>
