@@ -9,7 +9,7 @@ function App() {
   const [previewerMaximized, setPreviewerMaximized] = useState(false)
 
   return (
-    <div className="App">
+    <div className="App min-h-screen">
       { previewerMaximized ? '' :
         <Editor
           text={text}
