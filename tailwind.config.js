@@ -2,7 +2,29 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            'ul': {
+              '> li': {
+                '&::before': {
+                  'background-color': '#6b7280',
+                },
+              },
+            },
+            tbody: {
+              tr: {
+                'border-bottom-color': '#6b7280',
+              },
+            },
+            thead: {
+              'border-bottom-color': '#111827',
+            },
+          },
+        },
+      }),
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
@@ -19,5 +41,7 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
