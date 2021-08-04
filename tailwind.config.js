@@ -21,6 +21,9 @@ module.exports = {
             thead: {
               'border-bottom-color': '#111827',
             },
+            blockquote: {
+              'border-left-color': '#1f2937',
+            },
           },
         },
       }),
