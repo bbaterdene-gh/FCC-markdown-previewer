@@ -1,4 +1,4 @@
-export const text = `# Welcome to my React Markdown Previewer!
+export const defaultMarkdown = `# Welcome to my React Markdown Previewer!
 
 ## This is a sub-heading...
 ### And here's some other cool stuff:

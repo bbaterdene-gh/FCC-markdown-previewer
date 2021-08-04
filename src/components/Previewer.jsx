@@ -1,6 +1,6 @@
 import React from 'react'
 import { Toolbar } from './Toolbar'
-import { text } from '../files/markdown-default'
+import marked from 'marked';
 
 export const Previewer = (props) => {
   return (
@@ -8,11 +8,11 @@ export const Previewer = (props) => {
     <Toolbar
       isMaximized={props.previewerMaximized}
       setMaximized={props.setPreviewerMaximized}>Previewer</Toolbar>
-      <textarea
+      <div
         id="editor"
         className="bg-iceberg p-2 pb-4 min-w-full h-64 max-h-64 border-b border-r border-l shadow-2xl-lrb"
-        defaultValue={text}>
-      </textarea>
+        dangerouslySetInnerHTML={ {__html: marked(props.text)} }>
+      </div>
     </div>
   )
 }
