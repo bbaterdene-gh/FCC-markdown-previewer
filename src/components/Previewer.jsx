@@ -9,7 +9,7 @@ export const Previewer = (props) => {
       isMaximized={props.previewerMaximized}
       setMaximized={props.setPreviewerMaximized}>Previewer</Toolbar>
       <div
-        id="editor"
+        id="preview"
         className="bg-iceberg p-3 pb-4 min-w-full border-b border-r border-l shadow-2xl-lrb prose prose-sm"
         dangerouslySetInnerHTML={ {__html: marked(props.text)} }>
       </div>
